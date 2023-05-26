@@ -63,6 +63,12 @@
     + .image__text {
         margin-top: 10px;
     }
+
+    svg {
+        path {
+            stroke: #7A797D;
+        }
+    }
 }
 .sidebar__item:last-child > .image__text:last-child:before, .sidebar__item:last-child > .image__text:last-child:after  {
     content: '';

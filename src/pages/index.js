@@ -17,7 +17,6 @@ const Home = () => {
     const [activeNavTrending, SetActiveNavTrending] = useState('Art')
     const [state, updateState] = useState();
     const forceUpdate = useCallback(() => updateState({}), []);
-    
 
     const handleOnclick = (i) => {
         forceUpdate()

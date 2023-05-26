@@ -25,7 +25,7 @@ export const cardItem = [
     {
         title: 'ROI',
         icon: false,
-        value: 14.2,
+        value: 14.02,
         unit: '%',
         percent: 5.1,
     },

@@ -30,14 +30,16 @@
         > img {
             width: 28px;
             height: 28px;
+            margin-right: 4px;
         }
         > b {
-            font-size: 28px;
-            line-height: initial;
+            font-size: 22px;
+            line-height: 20px;
         }
         > h2 {
             line-height: 28px;
-            margin: 0;
+            font-size: 24px;
+            line-height: 23px;
             margin-right: 6px;
         }
         > span {
@@ -49,4 +51,11 @@
 }
 .justifly-center {
     justify-content: center;
+
+    span {
+        font-size: 16px;
+        line-height: 18px;
+        letter-spacing: 1px;
+        color: #747475;
+    }
 }

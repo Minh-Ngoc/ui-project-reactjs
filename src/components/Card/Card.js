@@ -20,13 +20,13 @@ const Card = () => {
                                    <img src={card.icon} alt='errorImage'/>
                                     ) : ( <b>+</b> )
                                 }
-                                <h2> {card.value} </h2>
+                                <h2> {card.value.toFixed(2)} </h2>
                                 <span> {card.unit} </span>
                             </div>
                             <ImageText 
                                 className={cx('justifly-center')}
                                 src={card.percent > 5 ? GreenArrow : RedArrow}
-                                text={card.percent}
+                                text={card.percent + '%'}
                             />
                         </div>
                     )
