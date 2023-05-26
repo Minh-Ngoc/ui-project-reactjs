@@ -1,0 +1,366 @@
+:root {
+    --pink: #5429FF;
+    --text: #7A797D;
+    --white: #fff;
+}
+
+.wrapper {
+    background: linear-gradient(90deg, #FFFFFF 0%, #BBAAFF 66.67%);
+
+    .container {
+        display: flex;
+        align-items: center;
+        height: 100vh;
+    }
+}
+
+#login {
+    width: 40%;
+    padding: 1rem 5% 1rem 10%;
+    .login__logo {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        cursor: pointer;
+        
+        img {
+            object-fit: cover;
+        }
+        .login__logo__text {
+
+            h2 {
+                font-weight: 700;
+                font-size: 28px;
+                line-height: 36px;
+                font-feature-settings: 'salt' on;
+                color: #27262E;
+            }
+            p {
+                font-weight: 700;
+                font-size: 10px;
+                line-height: 13px;
+                font-feature-settings: 'salt' on;
+                color: #7A797D;
+            }
+        }
+    }
+    h1 {
+        font-weight: 600;
+        font-size: 56px;
+        line-height: 84px;
+    }
+    .login__form{
+
+        .form__group {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+
+            label, p {
+                font-size: 16px;
+                line-height: 24px;
+            }
+            p {
+                color: var(--pink);
+                opacity: 0.6;
+            }
+            input {
+                background: rgba(187, 170, 255, 0.5);
+                border-radius: 4px;
+                font-size: 14px;
+                line-height: 21px;
+                border: none;
+                letter-spacing: 1px;
+                box-shadow: 0 0 3px 0px #868686;
+                outline: none;
+                padding: 10px 16px;
+            }
+            input:focus {
+                border: 1px solid #5429FF;
+            }
+            + .form__group {
+                margin-top: 2rem;
+            }
+        }
+        .form__password {
+            position: relative;
+
+            .hide__password {
+                position: absolute;
+                content: '';
+                width: 20px;
+                height: 18px;
+                background-image: url('../../assets/svgs/hideShowPassword.svg');
+                background-repeat: no-repeat;
+                background-size: 20px;
+                right: 5%;
+                bottom: 17%;
+                cursor: pointer;
+            }
+            .hide__password:hover {
+                opacity: 0.7;
+            }
+        }
+        .form__label__group {
+            display: flex;
+            justify-content: space-between;
+
+            p {
+                cursor: pointer;
+            }
+            p:hover {
+                opacity: 1;
+            }
+        }
+    }
+    .login__btn {
+        margin-top: 1rem;
+
+        button {
+            margin: 0 auto;
+            background-color: var(--pink);
+            border-radius: 20px;
+            padding: 12px 3rem;
+
+            span {
+                color: var(--white);
+                font-size: 16px;
+            }
+        }
+        button:hover {
+            opacity: 0.5;
+        }
+    }
+
+}
+.login__with {
+    margin: 2rem 0;
+    p {
+        text-align: center;
+        font-size: 16px;
+        line-height: 19px;
+        color: var(--pink);
+    }
+    .login__with__icon {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 2rem;
+
+        .login__with__icon-item {
+
+            button {
+                width: 126px;
+                justify-content: center;
+                background-color: var(--white);
+                border: 1px solid var(--pink);
+                border-radius: 40px;
+            }
+            button:hover {
+                background-color: var(--pink);
+                opacity: 0.5;
+            }
+        }
+    }
+    .login__with__group {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 2rem;
+
+        p {
+            font-size: 16px;
+            line-height: 19px;
+            display: flex;
+            align-items: center;
+            opacity: 0.5;
+            color: #000;
+        }
+        p:nth-child(2) {
+            color: var(--pink);
+            opacity: 1;
+            cursor: pointer;
+        }
+        p:nth-child(2):hover {
+            opacity: 0.7;
+        }
+    }
+}
+#background {
+    width: 60%;
+    height: 100%;
+    background-image: url(../../assets/imgs/backgroud.png);
+    background-repeat: no-repeat;
+    background-size: 68%;
+    object-fit: cover;
+}
+
+
+// .al-center {
+//     align-items: center;
+// }
+
+// .wrapper{
+//     height: 100vh;
+//     background: linear-gradient(90deg, #FFFFFF 0%, #BBAAFF 66.67%);
+//     padding: 5% 15%;
+// }
+// .container {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     border-radius: 40px;
+// }
+// .login__form {
+//     padding: 5rem;
+// }
+// .login__form > h1 {
+//     font-style: normal;
+//     font-weight: 600;
+//     font-size: 56px;
+//     line-height: 100px;
+// }
+// .form__group {
+//     display: flex;
+//     flex-direction: column;
+// }
+// .form__group + .form__group  {
+//     margin-top: 2rem;
+// }
+
+// .form__group > label + input, .form__group .form__label__group + input {
+//     margin-top: 8px;
+// }
+
+// .form__group > label {
+//     font-style: normal;
+//     font-size: 16px;
+//     line-height: 24px;
+// }
+
+// .form__group > input {
+//     width: 478px;
+//     height: 46px;
+//     padding: 0 1rem;
+//     background: #C0DBEA;
+//     border-radius: 4px;
+//     font-style: normal;
+//     font-weight: 400;
+//     font-size: 14px;
+//     line-height: 21px;
+//     letter-spacing: 1px;
+//     color: #000000;
+//     border: none;
+// }
+// .form__password {
+//     position: relative;
+// }
+
+// .form__label__group {
+//     display: flex;
+//     justify-content: space-between;
+// }
+// .hide__password {
+//     position: absolute;
+//     background-image: url(../../assets/imgs/clarity_eye-hide-line.png);
+//     background-repeat: no-repeat;
+//     background-size: 20px;
+//     object-fit: cover;
+//     width: 23px;
+//     height: 22px;
+//     cursor: pointer;
+//     margin-left: 440px;
+//     margin-top: 33px;
+// }
+// .form__label__group > label.forgot__password {
+//     opacity: 0.5;
+//     font-size: 14px;
+//     line-height: 21px;
+// }
+// .isValid {
+//     color: red;
+//     font-size: 18px;
+//     font-weight: 600;
+//     text-align: center;
+// }
+// #btn__submit {
+//     width: 200px;
+//     height: 46px;
+//     background: #D885A3;
+//     border-radius: 23px;
+//     border: none;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     cursor: pointer;
+// }
+
+// #btn__submit > span {
+//     font-style: normal;
+//     font-weight: 600;
+//     font-size: 16px;
+//     line-height: 24px;
+
+//     text-transform: uppercase;
+
+//     color: #FFFFFF;
+// }
+// #btn__submit > span + img {
+//     margin-left: 8px;
+// }
+// /* #btn__submit img{
+//     transform: matrix(-1, 0, 0, 1, 0, 0);
+// } */
+// .login__with {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 30px;
+//     margin-top: 1rem;
+//     text-align: center;
+// }
+// .login__with > span {
+//     font-style: normal;
+//     font-weight: 400;
+//     font-size: 14px;
+//     line-height: 19px;
+
+//     color: #6096B4;
+// }
+// .login__with-image {
+//     display: flex;
+//     justify-content: space-evenly;
+// }
+// .img__item {
+//     box-sizing: border-box;
+//     width: 125px;
+//     height: 50px;
+//     border: 1px solid #6096B4;
+//     border-radius: 40px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     cursor: pointer;
+// }
+
+// .form__group__text span + span {
+//     margin-left: 1rem;
+// }
+// .form__group__text span:nth-child(1){
+//     font-size: 14px;
+//     line-height: 19px;
+//     color: #000000;
+//     opacity: 0.5;
+// }
+// .form__group__text span:nth-child(2){
+//     font-weight: 400;
+//     font-size: 14px;
+//     line-height: 19px;
+//     color: #D885A3;
+// }
+
+// .login__image {
+//     position: relative;
+//     border-radius: 40px;
+//     img {
+//         width: 100%;
+//     }
+// }

@@ -22,7 +22,7 @@ const Button = ({to, increate, textContent, className, src, type, backgroundColo
                 {...props}
             >
                 {increate && (<b> {increate} </b>)}
-                <span> {textContent} </span>
+                {textContent && <span> {textContent} </span>}
                 {src && ( <img src={src} alt="ErrorImage" /> ) }
                 
             </Comp>

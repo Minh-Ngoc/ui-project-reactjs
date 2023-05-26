@@ -17,7 +17,8 @@ const SvgText = ({to, Component, src, text, className, unit, children , ...props
             to={to}
             {...props} >
             <Component />
-            <span> {text} {unit} </span>
+            {text || unit ? <span> {text} {unit} </span> : ''}
+            {/* <span> {text} {unit} </span> */}
             {children}
         </Comp>
     )
