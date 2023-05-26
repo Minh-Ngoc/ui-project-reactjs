@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'ProximaNova', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    overflow-y: overlay;
+    padding: 0 10%;
+}
+
+@font-face {
+    font-family: ProximaNova;
+    src: url('../../assets/font/Proxima\ Nova\ Semibold.ttf');
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+}
+button {
+    cursor: pointer;
+}
+
+@media (max-width: 1468.890px) {
+    body {
+        padding: 0;
+    }
+}

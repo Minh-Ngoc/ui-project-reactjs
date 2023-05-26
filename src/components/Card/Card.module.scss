@@ -1,0 +1,52 @@
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+.card__content {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    width: calc(100% / 2 - 1rem);
+    min-width: 170px;
+    max-height: 170px;
+    background-color: #fff;
+    border-radius: 12px;
+    gap: 1rem;
+
+    .card__content-title {
+        text-align: left;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 18px;
+        color: #747475;
+    }
+    .card__content-group {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    
+        > img {
+            width: 28px;
+            height: 28px;
+        }
+        > b {
+            font-size: 28px;
+            line-height: initial;
+        }
+        > h2 {
+            line-height: 28px;
+            margin: 0;
+            margin-right: 6px;
+        }
+        > span {
+            font-size: 15px;
+            color:#747475;
+            line-height: initial;
+        }
+    }
+}
+.justifly-center {
+    justify-content: center;
+}

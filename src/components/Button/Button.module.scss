@@ -1,0 +1,27 @@
+
+.button {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    border-radius: 12px;
+    border: none;
+    background-color: #80e6f8;
+
+    > b {
+        padding: 4px 10px;
+        font-size: 18px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: max-content;
+        background: #5429FF;
+        color: #fff;
+        z-index: 99;
+    }
+    > span {
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,449 @@
+.wrapper {
+    background-color: #cefff8;
+    width: 100%;
+    padding: 2rem;
+
+    //------------------------------Header----------------------------------//
+    #header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 3rem;
+
+        .header__search {
+            position: relative;
+
+            input.ip__search {
+                width: 370px;
+                height: 56px;
+                padding: 0 1rem 0 4rem;
+                border-radius: 35px;
+                border: none;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 21px;
+                font-feature-settings: 'salt' on;
+                background-image: url('../assets/imgs/search.png');
+                background-repeat: no-repeat;
+                background-position: 1.6rem center;
+                transition: all .1s linear;
+            }
+            
+            input:focus {
+                border: 1px solid #6916cb;
+                outline: none;
+                width: 460px;
+                transition: all .1s linear;
+            }
+            input:focus ~ label,
+            input:not(:placeholder-shown) ~ label {
+                top: -10px;
+                color: #983eff;
+                border-top: 1px solid #9442f3;
+                z-index: 999;
+                background-color: #fff;
+                padding: 0 10px;
+                border-radius: 10px;
+                z-index: 999;
+            }
+
+            label {
+                position: absolute;
+                color: #B9B8BC;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 21px;
+                top: 33%;
+                left: 4rem;
+                font-feature-settings: 'salt' on;
+                user-select: text;
+                transition: all .1s linear;
+                outline: none;
+            }
+        }
+        .header__icon {
+            display: flex;
+            gap: 1.8rem;
+            position: relative;
+        }
+    }
+}
+
+.icon__notification {
+    background-color: #FFF;
+    padding: 0 16px;
+}
+.icon__notification::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    right: 73%;
+    top: 30%;
+    border: 1px solid #fff;
+    background-color: #FC8B23;
+}
+
+    //------------------------------Main----------------------------------//
+
+#main {
+    display: flex;
+    justify-content: space-between;
+
+    .content {
+        display: flex;
+        width: max-content;
+        flex-direction: column;
+        gap: 1rem;
+        width: 62%;
+    }
+}
+
+    //------------------------------Banner----------------------------------//
+
+.banner {
+    position: relative;
+
+    img {
+        border-radius: 12px;
+        height: 354px;
+    }
+    .banner__introduce-content {
+        position: absolute;
+        top: 22%;
+        left: 10%;
+        right: 10%;
+
+        .banner__introduce-title {
+            font-weight: 700;
+            font-size: 54px;
+            line-height: 120%;
+            letter-spacing: -0.02em;
+            color: #FFFFFF;
+        }
+    }
+}
+.banner__introduce-btn {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+
+    .banner__btn__discover button{
+        width: 128px;
+        height: 46px;
+        background: #FFFFFF;
+        border-radius: 40px;
+        justify-content: center;
+
+        span {
+            color: #5429FF;
+        }
+
+    }
+    .banner__btn__create button{
+        width: 128px;
+        height: 46px;
+        background-color: transparent;
+        border: 1px solid #fff;
+        color: #fff;
+        border-radius: 40px;
+        justify-content: center;
+
+    }
+    .banner__btn__discover button span, .banner__btn__create button span {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+        font-feature-settings: 'salt' on;
+    }
+}
+
+    //------------------------------Trending----------------------------------//
+
+.trending {
+
+}
+.trending__header {
+    display: flex;
+    justify-content: space-between;
+
+    .trending__header-title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 31px;
+        font-feature-settings: 'salt' on;
+        color: #27262E;
+    }
+    .trending__header-nav {
+        
+        nav {
+            display: flex;
+            gap: 1rem;
+
+            .header-nav_btn button {
+                color: #7A797D;
+                font-size: 14px;
+                line-height: 18px;
+                background-color: transparent;
+            }
+            .active button {
+                background-color: rgba(84, 41, 255, 0.2);
+                
+                span {
+                    color:#5429FF;
+                }
+            }
+        }
+    }
+}
+.trending__content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.trending__content-item {
+    padding: 10px 10px 20px 10px;
+    background-color: #fff;
+    border-radius: 16px;
+
+    .content-item__img {
+        position: relative;
+
+        img {
+            border-radius: 12px;
+        }
+
+        .item__img__btn {
+            position: absolute;
+            opacity: 0; 
+
+            button {
+                padding: 12px 30px;
+                justify-content: center;
+                height: 46px;
+                background: #FFFFFF;
+                border-radius: 40px;
+
+                span {
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 22px;
+                    font-feature-settings: 'salt' on;
+                    color: #5429FF;
+                }
+            }
+        }
+
+        .item__img__time {
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+            padding: 6px 10px 6px 6px;
+            background: rgba(22, 22, 22, 0.16);
+            backdrop-filter: blur(17px);
+            border-radius: 20px;
+
+            .item__img__time-group {
+                margin-left: 8px;
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                span {
+                    font-size: 12px;
+                    line-height: 16px;
+                    font-feature-settings: 'salt' on;
+                    color: #FFFFFF; 
+                }
+            }
+        }
+    }
+    .content-item__img:hover {
+        .item__img__btn {
+            transition: all 0.5s linear;
+            opacity: 1;
+        }
+    }
+}
+
+.item__img__btn:hover button{
+
+        background-color:transparent !important;
+        border: 2px solid #fff;
+
+        span {
+         color: #fff !important;
+        }
+   
+}
+
+.content-item__user {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.4rem;
+}
+.content-item__user-left {
+
+    h2 {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 31px;
+        font-feature-settings: 'salt' on;
+        color: #27262E;
+    }
+    p {
+        font-size: 16px;
+        line-height: 21px;
+        font-feature-settings: 'salt' on;
+        color: #747475;
+    }
+    .author {
+        margin: 1rem 0;
+        padding: 0;
+
+        img {
+            width: 28px;
+            height: 28px;
+        }
+        span {
+            font-size: 16px;
+            line-height: 21px;
+            font-feature-settings: 'salt' on;
+            color: #747475;
+        }
+    }
+}
+.content-item__user-right {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    p {
+        font-size: 16px;
+        line-height: 21px;
+        font-feature-settings: 'salt' on;
+        color: #747475;
+    }
+    .eth {
+        padding: 0;
+
+        span {
+            font-size: 16px;
+            line-height: 21px;
+            font-feature-settings: 'salt' on;
+            color: #27262E;
+        }
+        span:nth-child(3) {
+            color: #747475;
+        }
+    }
+}
+    //------------------------------Card----------------------------------//
+
+.content__right {
+    width: 32%;
+
+    .card {
+
+    }
+    .top__creator {
+        background-color: #fff;
+        margin-top: 3.2rem;
+        border-radius: 16px;
+        padding: 1rem 2rem;
+        min-width: calc(170px + 170px + 1rem);
+    }
+}
+.top__creator__container {
+    margin-top: 1.4rem;
+}
+.top__creator__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 14px;
+    
+    h1 {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 31px;
+        font-feature-settings: 'salt' on;
+        color: #27262E;
+    }
+    p {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 21px;
+        text-align: right;
+        font-feature-settings: 'salt' on;
+        color: #747475;
+    }
+}
+.top__creator__list {
+    display: flex;
+    justify-content: space-between;
+
+    + .top__creator__list {
+        margin-top: 1.6rem;
+    }
+}
+.top__creator__list-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    p {
+        font-size: 16px;
+        line-height: 21px;
+        font-feature-settings: 'salt' on;
+        color: #27262E;
+    }
+    .user_image {
+        
+    }
+    .user-info {
+
+        .user__username {
+            font-size: 16px;
+            line-height: 30px;
+            font-feature-settings: 'salt' on;
+            color: #27262E;
+        }
+        .user__author {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+            font-feature-settings: 'salt' on;
+            color: #747475;
+        }
+    }
+}
+.top__creator__list-follow {
+    button {
+        padding: 10px 20px;
+        justify-content: center;
+        background: #fff;
+        border-radius: 20px;
+
+        span {
+            font-size: 12px;
+            line-height: 16px;
+            font-feature-settings: 'salt' on;
+            color: #5429FF;
+        }
+    }
+}
+.active {
+
+    button {
+        background: #5429FF ;
+
+        span {
+            color: #fff ;
+        }
+    }
+}

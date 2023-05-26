@@ -1,0 +1,12 @@
+.wrapper {
+    border-radius: 50%;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    
+    img {
+        border-radius: 50%;
+    }
+}
