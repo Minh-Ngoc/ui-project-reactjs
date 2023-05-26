@@ -435,6 +435,11 @@
             font-feature-settings: 'salt' on;
             color: #5429FF;
         }
+        img {
+            border-radius: 50%;
+            object-fit: cover;
+            width: 32px;
+        }
     }
 }
 .active {

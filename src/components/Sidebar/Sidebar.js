@@ -11,7 +11,7 @@ import ArrowRight from '../../assets/imgs/VectorRight.png';
 const cx = classNames.bind(styles);
 
 const Sidebar = () => {
-    const [active, setActive] = useState('dashboard');
+    const [active, setActive] = useState('Dashboard');
     const joinPath = (path) => {
         let text = path.split(' ').join('')
         return `/${text.toLowerCase()}`

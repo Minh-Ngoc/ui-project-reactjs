@@ -1,16 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useState, useCallback } from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import classNames from 'classnames/bind';
 import styles from './index.module.scss';
-import notificationIcon from '../assets/imgs/Notification.png'
-import bannerImage from '../assets/imgs/Rectangle 13.png'
-import bannerImage1 from '../assets/imgs/slider.jpg'
-import bannerImage2 from '../assets/imgs/slider1.png'
-import bannerImage3 from '../assets/imgs/slider2.png'
-import userIcon from '../assets/imgs/user.png'
-import timeImg from '../assets/imgs/time.png'
-import Icon from '../assets/imgs/Ethereum.png';
+import { notificationIcon, bannerImage, bannerImage1, bannerImage2, bannerImage3, userIcon, timeImg, Icon } from '../components/ImageLists'
 import Images from '../components/Images'
 import ImageText from '../components/ImageText';
 import Button from '../components/Button';
@@ -21,14 +14,15 @@ const cx = classNames.bind(styles);
 
 const Home = () => {
     const navTrendings = ['Art', 'Music', 'Collectibles', 'Utility'];
-    const [activeNavTrending, SetActiveNavTrending] = useState('')
+    const [activeNavTrending, SetActiveNavTrending] = useState('Art')
+    const [state, updateState] = useState();
+    const forceUpdate = useCallback(() => updateState({}), []);
+    
 
     const handleOnclick = (i) => {
-        // console.log(userItemLists.map(list => list.follow))
-        console.log(userItemLists[i].follow)
+        forceUpdate()
         userItemLists[i].follow = !userItemLists[i].follow
-    }
-
+    }  
     return (
         <div className={cx('wrapper')}>
             {/* --------------------------Header--------------------- */}
