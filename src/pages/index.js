@@ -55,7 +55,7 @@ const Home = () => {
 
                 <div className={cx('content')}>
                     <div className={cx('banner')}>
-                        <Carousel showThumbs={false}>
+                        <Carousel showThumbs={false} autoPlay={true}>
                             <img src={bannerImage} alt="ErrorBanner" />
                             <img src={bannerImage1} alt="ErrorBanner" />
                             <img src={bannerImage2} alt="ErrorBanner" />
