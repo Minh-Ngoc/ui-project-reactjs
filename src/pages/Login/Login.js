@@ -71,56 +71,6 @@ const Login = () => {
                 <div id={cx('background')}></div>
             </div>
         </div>
-
-        // <div className={cx("wrapper")}>
-        //     <div className={cx("container")}>
-        //         <div className={cx("login__form")}>
-        //             <h1>Login</h1>
-        //             <div className={cx("form__group")}>
-        //                 <label htmlFor="username">Username</label>
-        //                 <input id="username" value="kminchelle" name="username" type="text" placeholder="username"/>
-        //             </div>
-        //             <div className={cx("form__group", "form__password")}>
-        //                 <div className={cx("form__label__group")}>
-        //                     <label htmlFor="password">Password</label>
-        //                     <label className={cx("forgot__password")}>Forgot Password ?</label>
-        //                 </div>
-        //                 <span className={cx("hide__password")}></span>
-        //                 <input id="password" value="0lelplR" name="password" type="password" placeholder="password"/>
-        //             </div>
-                    
-        //             <div className={cx("form__group", "isValid")}></div>
-
-        //             <div className={cx("form__group", "al-center")}>
-        //                 <button id={('btn__submit')} type="submit">
-        //                     <span>LOGIN IN</span>
-        //                     <img src={img1} alt=""/>
-        //                 </button>
-        //             </div>
-        //             <div className={cx("login__with")}>
-        //                 <span>or continue with</span>
-        //                 <div className={cx("login__with-image")}>
-        //                     <div className={cx("img__item")}>
-        //                         <img src={img2} alt=""/>
-        //                     </div>
-        //                     <div className={cx("img__item")}>
-        //                         <img src={img3} alt=""/>
-        //                     </div>
-        //                     <div className={cx("img__item")}>
-        //                         <img src={img4} alt=""/>
-        //                     </div>
-        //                 </div>
-        //                 <div className={cx("form__group__text")}>
-        //                     <span>Don't have an account yet?</span>
-        //                     <span>Sign up for free</span>
-        //                 </div>
-        //             </div>
-        //         </div>
-        //         <div className={cx("login__image")}>
-        //             <img src={img5} alt=""/>
-        //         </div>
-        //     </div>
-        // </div>
     )
 }
 
