@@ -4,14 +4,15 @@ import logo from '../../assets/imgs/Logo.png';
 import google from '../../assets/imgs/Google.png';
 import github from '../../assets/imgs/Github.png';
 import facebook from '../../assets/imgs/Facebook.png';
-import img5 from '../../assets/imgs/backgroud.png';
-import backgroud from '../../assets/imgs/backgroud.png';
 import Button from '../../components/Button';
+import { useState } from 'react';
 
 const cx = classNames.bind(styles);
 
 const Login = () => {
-    const itemLogin = [google, github, facebook]
+    const itemLogin = [google, github, facebook];
+    const [type, setType] = useState('password');
+    const handleShowPassword = (e) => type === 'password' ? setType('text') : setType('password')
     return (
         <div className={cx('wrapper')}>
             <div className={cx('container')}>
@@ -37,8 +38,8 @@ const Login = () => {
                                     <label htmlFor='password'>Password</label>
                                     <p className={cx('forgot__password')}>Forgot Password ?</p>
                                 </div>
-                                <span className={cx('hide__password')}></span>
-                                <input id='password' type='password' placeholder='password'/>
+                                <span onClick={handleShowPassword} className={cx('hide__password')}></span>
+                                <input id='password' type={type} placeholder='password'/>
                             </div>
                             
                             <div className={cx('form__group', 'isValid')}></div>
