@@ -6,6 +6,9 @@ import styles from './index.module.scss';
 import { notificationIcon, bannerImage, bannerImage1, bannerImage2, bannerImage3, userIcon, timeImg, Icon } from '../components/ImageLists'
 import Images from '../components/Images'
 import ImageText from '../components/ImageText';
+import SvgText from '../components/SvgText';
+import { ReactComponent as Menu } from '../assets/svgs/menu.svg';
+import { ReactComponent as Close } from '../assets/svgs/close-icon.svg';
 import Button from '../components/Button';
 import Card from '../components/Card';
 import { userItemLists } from '../components/UserLists';
@@ -16,8 +19,9 @@ const Home = () => {
     const navTrendings = ['Art', 'Music', 'Collectibles', 'Utility'];
     const [activeNavTrending, SetActiveNavTrending] = useState('Art')
     const [state, updateState] = useState();
+    const [menu, setMenu] = useState(false);
     const forceUpdate = useCallback(() => updateState({}), []);
-
+    console.log(menu);
     const handleOnclick = (i) => {
         forceUpdate()
         userItemLists[i].follow = !userItemLists[i].follow
@@ -47,6 +51,39 @@ const Home = () => {
                         alt="ErrorUser"
                     />
                 </div>
+                <div className={cx('header__menu')} onClick={() => setMenu(true)}>
+                    <SvgText Component={Menu} />
+                </div>
+                {
+                    menu && ( <div className={cx('header__overlay')}>
+                        <SvgText onClick={() => setMenu(false)} className={cx('header__menu-close')} Component={Close} />
+                        <div className={cx('header__menu-list')}>
+                            <li>
+                                <input
+                                    className={cx('ip__search')}
+                                    type="text"
+                                    id={cx('search')}
+                                    placeholder=' '
+                                />
+                                <label htmlFor='search' className={cx('label__search')}>Search..</label>
+                            </li>
+                            <li>
+                                <Images
+                                    className={cx('icon__notification')}
+                                    src={notificationIcon}
+                                    alt="ErrorNotification"
+                                />
+                            </li>
+                            <li>
+                                <Images
+                                    className={cx('icon__user')}
+                                    src={userIcon}
+                                    alt="ErrorUser"
+                                />
+                            </li>
+                        </div>
+                    </div> )
+                }
             </div>
             {/* ---------------------------Main---------------------- */}
             <main id={cx('main')}>
@@ -54,7 +91,7 @@ const Home = () => {
 
                 <div className={cx('content')}>
                     <div className={cx('banner')}>
-                        <Carousel showThumbs={false} autoPlay={true}>
+                        <Carousel showThumbs={false} infiniteLoop autoPlay={true}>
                             <img src={bannerImage} alt="ErrorBanner" />
                             <img src={bannerImage1} alt="ErrorBanner" />
                             <img src={bannerImage2} alt="ErrorBanner" />
@@ -160,7 +197,7 @@ const Home = () => {
                             {
                                 userItemLists.map((user, index) => {
                                     return (
-                                        <div className={cx('top__creator__list')} key={user.name}>
+                                        <div className={cx('top__creator__item')} key={user.name}>
                                             <div className={cx('top__creator__list-info')}>
                                                 <p> {index + 1 + '.'} </p>
                                                 <Images
