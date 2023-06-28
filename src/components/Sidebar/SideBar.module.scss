@@ -1,5 +1,5 @@
 .wrapper {
-    width: max-content;
+    width: 300px;
     height: 100vh;
     padding: 2rem 1.4rem;
 
@@ -112,7 +112,7 @@
         font-size: 30px;
         line-height: 39px;
         color: #FFFFFF;
-        z-index: 50;
+        z-index: 999;
     }
     .sidebar__card-icon {
         
@@ -129,7 +129,7 @@
         }
     }
     .sidebar__card-btn {
-        z-index: 50;
+        z-index: 999;
     }
 
     ::before {
@@ -167,7 +167,7 @@
     }
 }
 
-@media (max-width: 1468px) {
+@media (max-width: 1468.890px) {
     .wrapper {
         padding: 1rem 1.4rem;
 
@@ -194,37 +194,5 @@
     .sidebar__item-title {
         line-height: 40px;
     }
-}
-
-@media (max-width: 740px) {
-    .wrapper {
-        padding: 1rem 10px;
-    }
-    .sidebar__card {
-        display: none;
-    }
-    .image__text {
-        span {
-            display: none !important;
-        }
-    }
-    .sidebar__logo {
-        width: 60px;
-
-        .sidebar__logo-text {
     
-            h2 {
-                display: none;
-            }
-            p {
-                display: none;
-            }
-        }
-    }
-
-    .sidebar__item:last-child > .image__text:last-child:before, 
-    .sidebar__item:last-child > .image__text:last-child:after {
-        display: none;
-    }
 }
-

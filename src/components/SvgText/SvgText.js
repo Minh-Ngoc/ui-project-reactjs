@@ -10,7 +10,7 @@ const SvgText = ({to, Component, src, text, className, unit, children , ...props
 
     if(to) {
         Comp = Link ;
-    }
+    } 
     return (
         <Comp 
             className={cx('wrapper', className)} 

@@ -6,14 +6,14 @@ import RedArrow from '../../assets/imgs/Vector1.png'
 import { cardItem } from './CardItem'
 const cx = classNames.bind(styles);
 
-const Card = ({ className }) => {
+const Card = () => {
     
     return (
         <div className={cx('wrapper')}>
             {
                 cardItem.map((card, index) => {
                     return (
-                        <div className={cx('card__content', className)} key={index} >
+                        <div className={cx('card__content')} key={index} >
                             <div className={cx('card__content-title')}> {card.title} </div>
                             <div className={cx('card__content-group')}>
                                {card.icon ? (
